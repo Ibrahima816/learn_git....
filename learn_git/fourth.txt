@@ -1,0 +1,104 @@
+gueye@LAPTOP-QDRSELRB MINGW64 ~ (master)
+$ mkdir learn_git
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~ (master)
+$ cd learn_git
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git init
+Initialized empty Git repository in C:/Users/gueye/learn_git/.git/
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ touch third.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git add third.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git commit -m "ajout fichier third.txt"
+[master (root-commit) 3000729] ajout fichier third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ touch fourth.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git add fourth.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git commit -m "ajout fichier fourth.txt"
+[master 07260ea] ajout fichier fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ rm third.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git add third.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git commit -m "suppression du fichier third.txt"
+[master 76fd876] suppression du fichier third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 third.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git log
+commit 76fd87643d01e7bc243b018b50691103344a8df1 (HEAD -> master)
+Author: Ibrahima816 <gueyeibrahima816@gmail.com>
+Date:   Mon Mar 3 21:51:38 2025 +0000
+
+    suppression du fichier third.txt
+
+commit 07260ea7dc5bef5cd03d9e000b4d108550d1f716
+Author: Ibrahima816 <gueyeibrahima816@gmail.com>
+Date:   Mon Mar 3 21:37:44 2025 +0000
+
+    ajout fichier fourth.txt
+
+commit 300072991650900154ded86340a2a0c002f9aabe
+Author: Ibrahima816 <gueyeibrahima816@gmail.com>
+Date:   Mon Mar 3 21:34:39 2025 +0000
+
+    ajout fichier third.txt
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git config --global core.pager cat
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=schannel
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+user.name=Ibrahima816
+user.email=gueyeibrahima816@gmail.com
+core.pager=cat
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$ git config --global
+error: no action specified
+
+gueye@LAPTOP-QDRSELRB MINGW64 ~/learn_git (master)
+$
